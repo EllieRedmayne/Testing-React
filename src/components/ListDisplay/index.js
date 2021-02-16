@@ -5,9 +5,10 @@ import ListItem from "../ListItem";
 
 function ListDisplay({ list, tickItem }) {
   return (
-    <ol>
+    <ol data-testid="ol-test">
       {list.map((listItem, index) => (
         <ListItem
+          data-testid="list-item"
           name={listItem.name}
           completed={listItem.completed}
           key={index}
